@@ -1,9 +1,16 @@
 import React from 'react';
+import DisplayTab from './DisplayTab'
+const Display = (props) => {
+  const {state}=props;
 
-const Display = () => {
     return (
         <div>
-          display  
+          <h1>Šiuo metu aptarnaujami:</h1> 
+          <div>
+           <DisplayTab state={state} spec="spec1" />
+           <DisplayTab state={state} spec="spec2" />
+           <DisplayTab state={state} spec="spec3" />
+          </div>
         </div>
     );
 };

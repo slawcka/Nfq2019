@@ -15,7 +15,7 @@ const Specialist = (props) => {
         currentQueue = state.data[0][state.activeSpec].length
         return <div>
             <h2>siuo metu aptarnaujamas: {state.activeSpec}</h2>
-            <p>aptarnaujamas numeris: {currentClientNumber}</p>
+            {(currentClientNumber>0) && <p>aptarnaujamas numeris: {currentClientNumber}</p>}
             {(currentQueue < 1) ? <p>no clients in the queue</p> : <button onClick={deleteClient}>aptarnauta</button>}
         </div>
     }

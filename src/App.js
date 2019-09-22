@@ -40,7 +40,7 @@ class App extends Component {
     // eslint-disable-next-line default-case
     switch (spec) {
       case "spec1":
-        newNumber = lastNumber;
+        newNumber = lastNumber + 100;
         break;
       case "spec2":
         newNumber = lastNumber + 200;
@@ -57,7 +57,7 @@ class App extends Component {
       this.number = number;
     };
 
-    newClient = new Client(newNumber)
+    newClient = new Client(newNumber + 1)
     data[0][spec].push(newClient)
     this.setState({data})
     console.log('specialist: ', newClient);
@@ -102,7 +102,7 @@ class App extends Component {
         </ul>
          
       <Route exact path="/" component={()=> <Admin toLocalStorage={this.saveToLocalStorage} addClient={this.addClient} />} />
-        <Route path="/display" component={Display} />
+        <Route path="/display" component={()=> <Display state={this.state} />} />
         <Route path="/specialist" component={()=> <Specialist changeSpec={this.changeSpecialist} deleteClient={this.deleteClient} state={this.state} />} />
         </div>
           
