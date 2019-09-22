@@ -8,7 +8,8 @@ import Display from './components/Display';
 class App extends Component {
   state = {
     data: {},
-    loading: true
+    loading: true,
+    activeSpec:''
   }
 
   componentDidMount() {
@@ -31,7 +32,7 @@ class App extends Component {
   addClient = (e) => {
 
     let spec, data, object, Client, newClient, lastNumber, newNumber;
-    spec = e.target.dataset["specialistas"];
+    spec = e.target.dataset["specialist"];
     data = { ...this.state.data }
     object = data[0][spec]
     lastNumber = object.length
@@ -42,10 +43,10 @@ class App extends Component {
         newNumber = lastNumber;
         break;
       case "spec2":
-        newNumber = lastNumber + 100;
+        newNumber = lastNumber + 200;
         break;
       case "spec3":
-        newNumber = lastNumber + 200;
+        newNumber = lastNumber + 300;
     }
     console.log('lastNumber: ', lastNumber);
 
@@ -62,6 +63,22 @@ class App extends Component {
     console.log('specialist: ', newClient);
 
   }
+
+  deleteClient=()=>{
+    
+    const data = { ...this.state.data };
+    const client=this.state.activeSpec
+    data[0][client].shift()
+    this.setState({data})
+    
+
+  }
+  changeSpecialist=(e)=>{
+    const activeSpec = e.target.dataset["specialist"];
+    console.log('activeSpecialist: ', activeSpec);
+    this.setState({activeSpec})
+    
+}
   render() {
 
     const state = this.state
@@ -86,7 +103,7 @@ class App extends Component {
          
       <Route exact path="/" component={()=> <Admin toLocalStorage={this.saveToLocalStorage} addClient={this.addClient} />} />
         <Route path="/display" component={Display} />
-        <Route path="/specialist" component={Specialist} />
+        <Route path="/specialist" component={()=> <Specialist changeSpec={this.changeSpecialist} deleteClient={this.deleteClient} state={this.state} />} />
         </div>
           
         </Router>

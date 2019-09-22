@@ -3,31 +3,32 @@
         "spec1":
         [
             {
-                "vardas":"Vytas",
-                "pavarde":"Gedmindaudas"
+                "name":"Vytas",
+                "surname":"Gedmindaudas",
+                "number":101
             },
             {
-                "vardas":"Gytis",
-                "pavarde":"Asijus"
+                "name":"Gytis",
+                "surname":"Asijus",
+                "number":102
             },
             {
-                "vardas":"Vytas",
-                "pavarde":"Gerijus"
+                "name":"Vytas",
+                "surname":"Gerijus",
+                "number":103
             }
         ],
         "spec2":
         [
             {
-                "vardas":"Kestas",
-                "pavarde":"Ponas"
+                "name":"Kestas",
+                "surname":"Ponas",
+                "number":201
             },
             {
-                "vardas":"Jonas",
-                "pavarde":"Kanas"
-            },
-            {
-                "vardas":"Fonas",
-                "pavarde":"Vonus"
+                "name":"Jonas",
+                "surname":"Kanas",
+                "number":202
             }
 
         ]
@@ -35,16 +36,19 @@
         "spec3":
         [
             {
-                "vardas":"Gena",
-                "pavarde":"Metel"
+                "name":"Gena",
+                "surname":"Metel",
+                "number":301
             },
             {
-                "vardas":"Vycka",
-                "pavarde":"Butaut"
+                "name":"Vycka",
+                "surname":"Butaut",
+                "number":302
             },
             {
-                "vardas":"Voras",
-                "pavarde":"Buta"
+                "name":"Voras",
+                "surname":"Buta",
+                "number":303
             }
         ]
     }
