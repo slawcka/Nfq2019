@@ -84,7 +84,7 @@ class App extends Component {
           </li>
         </ul>
          
-          <Route exact path="/" component={Admin} toLocalStorage={this.saveToLocalStorage} addClient={this.addClient} />
+      <Route exact path="/" component={()=> <Admin toLocalStorage={this.saveToLocalStorage} addClient={this.addClient} />} />
         <Route path="/display" component={Display} />
         <Route path="/specialist" component={Specialist} />
         </div>
