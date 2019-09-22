@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import './App.css';
 import Admin from './components/Admin';
+import Specialist from './components/Specialist';
+import Display from './components/Display';
 
 class App extends Component {
   state = {
@@ -67,9 +70,27 @@ class App extends Component {
       return <p>loading..</p>
     } else {
       return (
-        <div>
-          <Admin toLocalStorage={this.saveToLocalStorage} addClient={this.addClient} />
+        <Router>
+          <div>
+          <ul>
+          <li>
+            <Link to="/">Admin</Link>
+          </li>
+          <li>
+            <Link to="/display">Display</Link>
+          </li>
+          <li>
+            <Link to="/specialist">Specialist</Link>
+          </li>
+        </ul>
+         
+          <Route exact path="/" component={Admin} toLocalStorage={this.saveToLocalStorage} addClient={this.addClient} />
+        <Route path="/display" component={Display} />
+        <Route path="/specialist" component={Specialist} />
         </div>
+          
+        </Router>
+        
       );
     }
 
