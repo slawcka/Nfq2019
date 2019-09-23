@@ -5,7 +5,7 @@ import logo from './assets/images/logo.svg'
 import Admin from './components/Admin';
 import Specialist from './components/Specialist';
 import Display from './components/Display';
-
+import Client from './components/Client'
 class App extends Component {
   state = {
     data: {},
@@ -99,13 +99,16 @@ class App extends Component {
                 <img className="logo" src={logo} alt="StackOverflowLive"></img>
                 <ul>
                   <li>
-                    <Link className="menu__button" to="/">Admin</Link>
+                    <Link className="menu__button" to="/">Administratorius</Link>
                   </li>
                   <li>
-                    <Link className="menu__button" to="/display">Display</Link>
+                    <Link className="menu__button" to="/display">Švieslentė</Link>
                   </li>
                   <li>
-                    <Link className="menu__button" to="/specialist">Specialist</Link>
+                    <Link className="menu__button" to="/specialist">Specialistas</Link>
+                  </li>
+                  <li>
+                    <Link className="menu__button" to="/Client">Klientas</Link>
                   </li>
                 </ul>
               </div>
@@ -127,6 +130,10 @@ class App extends Component {
                 changeSpec={this.changeSpecialist}
                 deleteClient={this.deleteClient}
                 state={this.state} />}
+              />
+            <Route path="/client" component={() =>
+              <Client
+                 />}
               />
 
           </div>
