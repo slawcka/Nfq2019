@@ -5,19 +5,19 @@
         "name": "Vytas",
         "number": 101,
         "served": true,
-        "time": 11
+        "time": 35
       },
       {
         "name": "Nedas",
         "number": 102,
         "served": true,
-        "time": 15
+        "time": 37
       },
       {
         "name": "Bobas",
         "number": 103,
         "served": false,
-        "time": null
+        "time": 48
       },
       {
         "name": "Virga",
@@ -49,11 +49,23 @@
         "name": "Gytis",
         "number": 203,
         "served": false,
-        "time": null
+        "time": 10
       },
       {
         "name": "Gandre",
         "number": 204,
+        "served": false,
+        "time": null
+      },
+      {
+        "name": "Gaju",
+        "number": 205,
+        "served": false,
+        "time": null
+      },
+      {
+        "name": "BonBon",
+        "number": 206,
         "served": false,
         "time": null
       }
@@ -69,17 +81,23 @@
         "name": "Molis",
         "number": 302,
         "served": false,
-        "time": null
+        "time":19
       },
       {
         "name": "Gena",
         "number": 303,
         "served": false,
-        "time": null
+        "time": 25
       },
       {
         "name": "Pukis",
         "number": 304,
+        "served": false,
+        "time": 29
+      },
+      {
+        "name": "Genijus",
+        "number": 305,
         "served": false,
         "time": null
       }

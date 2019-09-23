@@ -11,9 +11,9 @@ const Display = (props) => {
         </div>
      
       <div className="display__columns">
-        <DisplayTab state={state} spec="spec1" />
-        <DisplayTab state={state} spec="spec2" />
-        <DisplayTab state={state} spec="spec3" />
+        <DisplayTab state={state}  spec="spec1" />
+        <DisplayTab state={state}  spec="spec2" />
+        <DisplayTab state={state}  spec="spec3" />
       </div>
       </section>
   );
