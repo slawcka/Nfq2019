@@ -2,7 +2,7 @@ import React from 'react';
 import { useEffect, useState } from "react";
 const Admin = (props) => {
     const { state, addClient, toLocalStorage } = props
-    const [number, changeNumber] = useState(state.registeringNumber)
+    const [number] = useState(state.registeringNumber)
 
     const flashTicket = () => {
         if (number === '') {
@@ -27,9 +27,9 @@ const Admin = (props) => {
                 <button className="btn admin__save" onClick={toLocalStorage}><i className="fas fa-save"></i>save</button>
             </div>
             
-            <button className="btn-xl mb-5" onClick={addClient} data-specialist="spec1">spec1</button>
-            <button className="btn-xl mb-5" onClick={addClient} data-specialist="spec2">spec2</button>
-            <button className="btn-xl mb-5" onClick={addClient} data-specialist="spec3">spec3</button>
+            <button className="btn-xl mb-5" onClick={addClient} data-specialist="spec1">Javascript</button>
+            <button className="btn-xl mb-5" onClick={addClient} data-specialist="spec2">Php</button>
+            <button className="btn-xl mb-5" onClick={addClient} data-specialist="spec3">Python</button>
             <div className="ticket"><p>{(state.registeringNumber === '') ? 'nepasirinktas' : `kliento numeris: ${state.registeringNumber}`}</p></div>
             
         </section>

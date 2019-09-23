@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import './assets/style.css';
+import logo from './assets/images/logo.svg'
 import Admin from './components/Admin';
 import Specialist from './components/Specialist';
 import Display from './components/Display';
@@ -95,7 +96,7 @@ class App extends Component {
 
             <section className="menu">
               <div className="content flex center">
-                <h2 className="logo">StackOverflowLive</h2>
+                <img className="logo" src={logo} alt="StackOverflowLive"></img>
                 <ul>
                   <li>
                     <Link className="menu__button" to="/">Admin</Link>

@@ -62,7 +62,7 @@ ol, ul {
 }
 
 .btn-xl {
-  width: 300px;
+  width: 350px;
   font-size: 4em;
   background: #5dd39e;
   color: #2f805b;
@@ -78,6 +78,7 @@ ol, ul {
 }
 
 .logo {
+  height: 50px;
   color: #bce784;
   font-family: "Open Sans", sans-serif;
 }

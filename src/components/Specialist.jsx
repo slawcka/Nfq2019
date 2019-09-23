@@ -4,6 +4,10 @@ const Specialist = (props) => {
 
     const { state, changeSpec, deleteClient } = props
     let currentClientNumber, currentQueue
+    const specialist=
+    (state.activeSpec==="spec1") ? "Javascript"
+    : (state.activeSpec==="spec2") ? "Php"
+    : "Python"
     const showClient = (e) => {
 
         if (state.data[0][state.activeSpec].length === 0) {
@@ -14,7 +18,7 @@ const Specialist = (props) => {
 
         currentQueue = state.data[0][state.activeSpec].length
         return <div className="specialist__queue">
-            <h2 className="mb-3">Šiuo metu aptarnaujamas: {state.activeSpec}</h2>
+            <h2 className="mb-3">Šiuo metu aptarnaujamas: {specialist}</h2>
             {(currentClientNumber > 0) && <p className="mb-3">aptarnaujamas numeris: {currentClientNumber}</p>}
             {(currentQueue < 1) ? <p>eilėje nėra klientų</p> : <button className="btn" onClick={deleteClient}>aptarnauta</button>}
         </div>
@@ -27,7 +31,7 @@ const Specialist = (props) => {
             <section className="specialist__panel">
                 <button className="btn specialist__btn" onClick={changeSpec} data-specialist="spec1">aptarnauti <br/>JS</button>
                 <button className="btn specialist__btn" onClick={changeSpec} data-specialist="spec2">aptarnauti <br/>PhP</button>
-                <button className="btn specialist__btn" onClick={changeSpec} data-specialist="spec3">aptarnauti <br/>Swift</button>
+                <button className="btn specialist__btn" onClick={changeSpec} data-specialist="spec3">aptarnauti <br/>Python</button>
             </section>
             {(state.activeSpec === '') ? <p>nepasirinktas specialistas</p> : showClient()}
         </div>
