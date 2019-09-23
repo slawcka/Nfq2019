@@ -15,9 +15,10 @@ class App extends Component {
   }
 
   componentDidMount() {
-
     this.fetchData()
   }
+
+  
 
   fetchData = () => {
     fetch('./klientai.json')
@@ -63,7 +64,7 @@ class App extends Component {
     newClient = new Client(newNumber + 1)
     data[0][spec].push(newClient)
     this.setState({ data })
-    this.setState({registeringNumber:newNumber + 1})
+    this.setState({ registeringNumber: newNumber + 1 })
     console.log('specialist: ', newClient);
 
   }
@@ -77,12 +78,8 @@ class App extends Component {
 
 
   }
-  changeSpecialist = (e) => {
-    const activeSpec = e.target.dataset["specialist"];
-    console.log('activeSpecialist: ', activeSpec);
-    this.setState({ activeSpec })
-
-  }
+  
+  
   render() {
 
     const state = this.state
@@ -119,22 +116,22 @@ class App extends Component {
               <Admin
                 toLocalStorage={this.saveToLocalStorage}
                 addClient={this.addClient}
-                state={this.state} />}
-              />
+                state={state} />}
+            />
 
             <Route path="/display" component={() =>
-              <Display state={this.state} />} />
+              <Display state={state} />} />
 
             <Route path="/specialist" component={() =>
               <Specialist
                 changeSpec={this.changeSpecialist}
                 deleteClient={this.deleteClient}
-                state={this.state} />}
-              />
+                state={state} />}
+            />
             <Route path="/client" component={() =>
               <Client
-                 />}
-              />
+                state={state} />}
+            />
 
           </div>
 

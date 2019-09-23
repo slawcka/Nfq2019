@@ -1,55 +1,88 @@
 [
-    {
-        "spec1":
-        [
-            {
-                "name":"Vytas",
-                "surname":"Gedmindaudas",
-                "number":101
-            },
-            {
-                "name":"Gytis",
-                "surname":"Asijus",
-                "number":102
-            },
-            {
-                "name":"Vytas",
-                "surname":"Gerijus",
-                "number":103
-            }
-        ],
-        "spec2":
-        [
-            {
-                "name":"Kestas",
-                "surname":"Ponas",
-                "number":201
-            },
-            {
-                "name":"Jonas",
-                "surname":"Kanas",
-                "number":202
-            }
-
-        ]
-        ,
-        "spec3":
-        [
-            {
-                "name":"Gena",
-                "surname":"Metel",
-                "number":301
-            },
-            {
-                "name":"Vycka",
-                "surname":"Butaut",
-                "number":302
-            },
-            {
-                "name":"Voras",
-                "surname":"Buta",
-                "number":303
-            }
-        ]
-    }
+  {
+    "spec1": [
+      {
+        "name": "Vytas",
+        "number": 101,
+        "served": true,
+        "time": 11
+      },
+      {
+        "name": "Nedas",
+        "number": 102,
+        "served": true,
+        "time": 15
+      },
+      {
+        "name": "Bobas",
+        "number": 103,
+        "served": false,
+        "time": null
+      },
+      {
+        "name": "Virga",
+        "number": 104,
+        "served": false,
+        "time": null
+      },
+      {
+        "name": "Egle",
+        "number": 105,
+        "served": false,
+        "time": null
+      }
+    ],
+    "spec2": [
+      {
+        "name": "Bobas",
+        "number": 201,
+        "served": true,
+        "time": 8
+      },
+      {
+        "name": "Saulius",
+        "number": 202,
+        "served": true,
+        "time": 6
+      },
+      {
+        "name": "Gytis",
+        "number": 203,
+        "served": false,
+        "time": null
+      },
+      {
+        "name": "Gandre",
+        "number": 204,
+        "served": false,
+        "time": null
+      }
+    ],
+    "spec3": [
+      {
+        "name": "Sveta",
+        "number": 301,
+        "served": true,
+        "time": 11
+      },
+      {
+        "name": "Molis",
+        "number": 302,
+        "served": false,
+        "time": null
+      },
+      {
+        "name": "Gena",
+        "number": 303,
+        "served": false,
+        "time": null
+      },
+      {
+        "name": "Pukis",
+        "number": 304,
+        "served": false,
+        "time": null
+      }
+    ]
+  }
 ]
